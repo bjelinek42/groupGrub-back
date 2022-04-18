@@ -48,3 +48,46 @@
 # restaurant.save
 # restaurant = Restaurant.new(name: "Chef Bob's Lobstah Trap", cuisines: "Cajun", address: "592 South St.", image: "https://d3hbe0kmbam4a5.cloudfront.net/photos/b0201ba4-558f-4b55-8b12-fd4de5c75497.jpg")
 # restaurant.save
+
+# ru = RestaurantUser.new(restaurant_id: 1, user_id: 6)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 1, user_id: 7)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 2, user_id: 1)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 2, user_id: 2)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 3, user_id: 8)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 3, user_id: 4)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 4, user_id: 5)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 4, user_id: 7)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 1, user_id: 3)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 2, user_id: 6)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 4, user_id: 4)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 5, user_id: 6)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 5, user_id: 3)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 6, user_id: 6)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 6, user_id: 9)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 6, user_id: 2)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 5, user_id: 4)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 4, user_id: 10)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 4, user_id: 11)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 2, user_id: 11)
+# ru.save
+# ru = RestaurantUser.new(restaurant_id: 1, user_id: 11)
+# ru.save
