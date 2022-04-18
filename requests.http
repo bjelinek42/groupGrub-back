@@ -3,8 +3,18 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "email": "test@test.com",
+  "name": "Ben",
+  "email": "ben@test.com",
   "password": "password",
-  "password_confirmation": "password"
+  "password_confirmation": "password",
+  "group_id": 1
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "ben@test.com",
+  "password": "password"
 }
