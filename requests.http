@@ -3,11 +3,11 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Ben",
-  "email": "ben@test.com",
+  "name": "Sarah",
+  "email": "sarah@gmail.com",
   "password": "password",
   "password_confirmation": "password",
-  "group_id": 1
+  "group_id": 3
 }
 
 ### Sessions create (login)
@@ -15,12 +15,13 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "ben@test.com",
+  "email": "travis@gmail.com",
   "password": "password"
 }
 
 ###
-GEt http://localhost:3000/restaurants.json
+GET http://localhost:3000/restaurants.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTA2NjAwMjl9.F5M6jTLBiaj4sKNiEF7hKF9IVqGiCFwhLEf6MyBO2lk
 
 ###
 POST http://localhost:3000/restaurants.json
