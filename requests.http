@@ -18,3 +18,17 @@ Content-Type: application/json
   "email": "ben@test.com",
   "password": "password"
 }
+
+###
+GEt http://localhost:3000/restaurants.json
+
+###
+POST http://localhost:3000/restaurants.json
+content-type: application/json
+
+{
+  "name": "BJ's Brewhouse",
+  "cuisines": "American",
+  "address": "8273 Brews Dr.",
+  "image": "https://cloudfront.bjsrestaurants.com/img_5e4c874ee9b0a8.33886308_502_Colorado%20Springs_2019.jpg"
+}
