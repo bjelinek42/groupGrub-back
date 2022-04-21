@@ -24,6 +24,7 @@ GEt http://localhost:3000/restaurants.json
 
 ###
 POST http://localhost:3000/restaurants.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA2NDUwNjd9.88lzIdfWfx_WNyK1c0Lygjr3c73pGGE8RKq2r4hlblM
 content-type: application/json
 
 {
