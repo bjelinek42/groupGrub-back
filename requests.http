@@ -20,6 +20,10 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:3000/users/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA4MzczODh9.ZBMfAaqMxGmACj0sFsNq8Jlr2rPvLSAsYYD3mxu_kxg
+
+###
 GET http://localhost:3000/restaurants.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTA2NjAwMjl9.F5M6jTLBiaj4sKNiEF7hKF9IVqGiCFwhLEf6MyBO2lk
 

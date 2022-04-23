@@ -1,4 +1,6 @@
 class RestaurantsController < ApplicationController
+  
+  
   def index
     user = current_user
     restaurants = user.restaurants

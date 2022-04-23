@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  
   def create
     user = User.new(
       name: params[:name],
@@ -11,6 +12,16 @@ class UsersController < ApplicationController
       render json: { message: "User created successfully" }, status: :created
     else
       render json: { errors: user.errors.full_messages }, status: :bad_request
+    end
+  end
+
+  def show
+    if current_user
+      user = current_user
+      restaurants = user.restaurants
+      render json: {user.name => restaurants}
+    else
+      render json: {message: "You must be logged in view your profile"}
     end
   end
 
