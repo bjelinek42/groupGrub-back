@@ -15,7 +15,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "travis@gmail.com",
+  "email": "ben@gmail.com",
   "password": "password"
 }
 
@@ -25,12 +25,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTA2NjAwM
 
 ###
 POST http://localhost:3000/restaurants.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA2NDUwNjd9.88lzIdfWfx_WNyK1c0Lygjr3c73pGGE8RKq2r4hlblM
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA4MzczODh9.ZBMfAaqMxGmACj0sFsNq8Jlr2rPvLSAsYYD3mxu_kxg
 content-type: application/json
 
 {
-  "name": "BJ's Brewhouse",
-  "cuisines": "American",
-  "address": "8273 Brews Dr.",
-  "image": "https://cloudfront.bjsrestaurants.com/img_5e4c874ee9b0a8.33886308_502_Colorado%20Springs_2019.jpg"
+  "name": "Wok In Wok Out",
+  "cuisines": "Chinese",
+  "address": "539 Oro Blanco",
+  "image": "https://media-cdn.tripadvisor.com/media/photo-s/0c/ba/7e/26/entrance-of-wok-in-wok.jpg"
 }

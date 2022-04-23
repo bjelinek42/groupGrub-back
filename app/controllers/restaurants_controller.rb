@@ -14,6 +14,8 @@ class RestaurantsController < ApplicationController
         image: params[:image]
       )
       restaurant.save
+      ru = RestaurantUser.new(user_id: current_user.id, restaurant_id: restaurant.id)
+      ru.save
       render json: restaurant
     else
       render json: {message: "You must be logged in to create a new restaurant"}
