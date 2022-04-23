@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
   
   def index
     user = current_user
-    restaurants = user.restaurants
+    restaurants = Restaurant.all
     render json: restaurants
   end
   
