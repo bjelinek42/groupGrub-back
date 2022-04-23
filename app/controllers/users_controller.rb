@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if current_user
       user = current_user
       restaurants = user.restaurants
-      render json: {user.name => restaurants}
+      render json: "user" => user, "restaurants" => restaurants
     else
       render json: {message: "You must be logged in view your profile"}
     end
