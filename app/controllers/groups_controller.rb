@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
     end
     winner = tally.max_by{ |_k,v| v}[0]
     winning_restaurant = Restaurant.find(winner)
-    render json: {"group" => group, "winning_restaurant" => winning_restaurant}
+    render json: {"group" => group, "winning_restaurant" => winning_restaurant, "users" => group.users}
   end
 
 end
