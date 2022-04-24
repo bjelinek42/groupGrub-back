@@ -15,7 +15,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "jimmy@gmail.com",
+  "email": "ben@gmail.com",
   "password": "password"
 }
 
@@ -25,7 +25,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA4MzczO
 
 ###
 GET http://localhost:3000/restaurants.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTA2NjAwMjl9.F5M6jTLBiaj4sKNiEF7hKF9IVqGiCFwhLEf6MyBO2lk
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA5MTQ5NzZ9.W_yNmQvohxtUEm3PWKX6kTNkU1jiBNY8xG8vjG5eDSc
 
 ###
 POST http://localhost:3000/restaurants.json

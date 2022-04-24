@@ -3,8 +3,9 @@ class RestaurantsController < ApplicationController
   
   def index
     user = current_user
+    user_restaurants = user.restaurants
     restaurants = Restaurant.all
-    render json: restaurants
+    render json: {"restaurants" => restaurants, "user restaurants" => user_restaurants}
   end
   
   def create
