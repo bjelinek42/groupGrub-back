@@ -6,27 +6,27 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# user = User.new(name: "Ben", email: "ben@gmail.com", password_digest: "password", group_id: 2)
+# user = User.new(name: "Ben", email: "ben@gmail.com", password: "password", group_id: 2)
 # user.save
-# user = User.new(name: "Katrina", email: "katrina@gmail.com", password_digest: "password", group_id: 2)
+# user = User.new(name: "Katrina", email: "katrina@gmail.com", password: "password", group_id: 2)
 # user.save
-# user = User.new(name: "Howie", email: "howie@gmail.com", password_digest: "password", group_id: 2)
+# user = User.new(name: "Howie", email: "howie@gmail.com", password: "password", group_id: 2)
 # user.save
-# user = User.new(name: "Jimmy", email: "jimmy@gmail.com", password_digest: "password", group_id: 1)
+# user = User.new(name: "Jimmy", email: "jimmy@gmail.com", password: "password", group_id: 1)
 # user.save
-# user = User.new(name: "Drew", email: "drew@gmail.com", password_digest: "password", group_id: 1)
+# user = User.new(name: "Drew", email: "drew@gmail.com", password: "password", group_id: 1)
 # user.save
-# user = User.new(name: "Travis", email: "travis@gmail.com", password_digest: "password", group_id: 3)
+# user = User.new(name: "Travis", email: "travis@gmail.com", password: "password", group_id: 3)
 # user.save
-# user = User.new(name: "Erica", email: "erica@gmail.com", password_digest: "password", group_id: 3)
+# user = User.new(name: "Erica", email: "erica@gmail.com", password: "password", group_id: 3)
 # user.save
-# user = User.new(name: "Zac", email: "zac@gmail.com", password_digest: "password", group_id: 1)
+# user = User.new(name: "Zac", email: "zac@gmail.com", password: "password", group_id: 1)
 # user.save
-# user = User.new(name: "Steve", email: "steve@gmail.com", password_digest: "password", group_id: 3)
+# user = User.new(name: "Steve", email: "steve@gmail.com", password: "password", group_id: 3)
 # user.save
-# user = User.new(name: "Rachel", email: "rachel@gmail.com", password_digest: "password", group_id: 3)
+# user = User.new(name: "Rachel", email: "rachel@gmail.com", password: "password", group_id: 3)
 # user.save
-# user = User.new(name: "Brian", email: "brian@gmail.com", password_digest: "password", group_id: 1)
+# user = User.new(name: "Brian", email: "brian@gmail.com", password: "password", group_id: 1)
 # user.save
 
 # group = Group.new(name: "Ultimate")
