@@ -15,7 +15,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "ben@gmail.com",
+  "email": "travis@gmail.com",
   "password": "password"
 }
 
@@ -38,3 +38,7 @@ content-type: application/json
   "address": "539 Oro Blanco",
   "image": "https://media-cdn.tripadvisor.com/media/photo-s/0c/ba/7e/26/entrance-of-wok-in-wok.jpg"
 }
+
+###
+GET http://localhost:3000/groups/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTA5MDY4ODl9.DZ-UM_F1Tfif9K-x3Z4H5xyXmzREp3EVf5Qg-kSr86E

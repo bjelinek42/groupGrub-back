@@ -6,9 +6,12 @@ Rails.application.routes.draw do
 
   get "/users/:id" => "users#show"
   post "/users" => "users#create"
+
   post "/sessions" => "sessions#create"
 
   get "/restaurants" => "restaurants#index"
   post "/restaurants" => "restaurants#create"
+
+  get "/groups/:id" => "groups#show"
   
 end
