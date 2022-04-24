@@ -8,8 +8,14 @@ class GroupsController < ApplicationController
         votes << restaurant
       end
     end
-    
-    render json: votes
+    tally = {}
+    votes.each do |restaurant|
+      if tally[restaurant.id] == nil
+        tally[restaurant.id] = 0
+      end
+      tally[restaurant.id] += 1
+    end
+    render json: tally
   end
 
 end
