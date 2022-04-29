@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get "/restaurants" => "restaurants#index"
   post "/restaurants" => "restaurants#create"
+  get "/restaurants/search" => "restaurants#search"
 
   get "/groups/:id" => "groups#show"
   
