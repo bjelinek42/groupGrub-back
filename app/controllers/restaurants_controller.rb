@@ -13,7 +13,8 @@ class RestaurantsController < ApplicationController
         name: params[:name],
         cuisines: params[:cuisines],
         address: params[:address],
-        image: params[:image]
+        image: params[:image],
+        location_id: params[:location_id],
       )
       restaurant.save
       ru = RestaurantUser.new(user_id: current_user.id, restaurant_id: restaurant.id)
@@ -42,7 +43,7 @@ class RestaurantsController < ApplicationController
     request.body = "language=en_US&limit=1&location_id=33364&currency=USD"
 
     response = http.request(request)
-    
+
     render json: JSON.parse(response.read_body)["results"]["data"]
   end
 end
