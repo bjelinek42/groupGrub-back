@@ -9,6 +9,17 @@ class RestaurantsController < ApplicationController
   
   def create
     if current_user
+      duplicate = false
+      all_restaurants = Restaurant.all
+      while true
+        all_restaurants.each do |eatery|
+          if eatery.location_id == params[:location_id]
+            duplicate = true
+            break
+          end
+        end
+        break
+      end
       restaurant = Restaurant.new(
         name: params[:name],
         cuisines: params[:cuisines],
@@ -16,10 +27,17 @@ class RestaurantsController < ApplicationController
         image: params[:image],
         location_id: params[:location_id],
       )
-      restaurant.save
-      ru = RestaurantUser.new(user_id: current_user.id, restaurant_id: restaurant.id)
-      ru.save
-      render json: restaurant
+      if duplicate == false
+        restaurant.save
+        ru = RestaurantUser.new(user_id: current_user.id, restaurant_id: restaurant.id)
+        ru.save
+        render json: restaurant
+      else
+        restaurant = Restaurant.find_by(location_id: params[:location_id])
+        ru = RestaurantUser.new(user_id: current_user.id, restaurant_id: restaurant.id)
+        ru.save
+        render json: ru
+      end
     else
       render json: {message: "You must be logged in to create a new restaurant"}
     end
