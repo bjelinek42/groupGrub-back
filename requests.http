@@ -32,6 +32,15 @@ GET http://localhost:3000/restaurants/search.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTEzMzQ1NzZ9.V1rTM6MvfKInVZojeiltqpPa73qRsIWV2inP2jP7B3E
 
 ###
+POST http://localhost:3000/restaurants/search.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTEzMzQ1NzZ9.V1rTM6MvfKInVZojeiltqpPa73qRsIWV2inP2jP7B3E
+content-type: application/json
+
+{
+  "currentCity": "Cedar Rapids, Iowa"
+}
+
+###
 POST http://localhost:3000/restaurants.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA4MzczODh9.ZBMfAaqMxGmACj0sFsNq8Jlr2rPvLSAsYYD3mxu_kxg
 content-type: application/json

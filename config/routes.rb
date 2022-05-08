@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/restaurants" => "restaurants#index"
   post "/restaurants" => "restaurants#create"
   get "/restaurants/search" => "restaurants#search"
+  post "/restaurants/search" => "restaurants#find_city"
 
   get "/groups/:id" => "groups#show"
   

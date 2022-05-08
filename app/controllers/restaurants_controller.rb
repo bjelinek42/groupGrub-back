@@ -58,10 +58,42 @@ class RestaurantsController < ApplicationController
     request["content-type"] = 'application/x-www-form-urlencoded'
     request["X-RapidAPI-Host"] = 'worldwide-restaurants.p.rapidapi.com'
     request["X-RapidAPI-Key"] = Rails.application.credentials.ww_restaurants_api_key
-    request.body = "language=en_US&limit=1&location_id=33364&currency=USD"
+    request.body = "language=en_US&limit=50&location_id=33364&currency=USD"
 
     response = http.request(request)
 
     render json: JSON.parse(response.read_body)["results"]["data"]
+  end
+
+  def find_city
+    require 'uri'
+    require 'net/http'
+    require 'openssl'
+
+    url = URI("https://worldwide-restaurants.p.rapidapi.com/typeahead")
+
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+    request = Net::HTTP::Post.new(url)
+    request["content-type"] = 'application/x-www-form-urlencoded'
+    request["X-RapidAPI-Host"] = 'worldwide-restaurants.p.rapidapi.com'
+    request["X-RapidAPI-Key"] = Rails.application.credentials.ww_restaurants_api_key
+    pp params[:currentCity]
+    request.body = "q=#{params[:currentCity]}&language=en_US"
+
+    response = http.request(request)
+    response = JSON.parse(response.read_body)["results"]["data"]
+    cities = []
+    response.each do |city|
+      location = {}
+      name = city["result_object"]["location_string"]
+      location_id = city["result_object"]["location_id"]
+      location["city"] = name
+      location["location_id"] = location_id
+      cities << location
+    end
+    render json: cities
   end
 end
