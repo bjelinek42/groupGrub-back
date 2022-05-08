@@ -47,7 +47,8 @@ class RestaurantsController < ApplicationController
     require 'uri'
     require 'net/http'
     require 'openssl'
-    
+    p params[:chosenCity]
+    location_id = params[:chosenCity]
     url = URI("https://worldwide-restaurants.p.rapidapi.com/search")
 
     http = Net::HTTP.new(url.host, url.port)
@@ -58,7 +59,7 @@ class RestaurantsController < ApplicationController
     request["content-type"] = 'application/x-www-form-urlencoded'
     request["X-RapidAPI-Host"] = 'worldwide-restaurants.p.rapidapi.com'
     request["X-RapidAPI-Key"] = Rails.application.credentials.ww_restaurants_api_key
-    request.body = "language=en_US&limit=50&location_id=33364&currency=USD"
+    request.body = "language=en_US&limit=50&location_id=#{location_id}&currency=USD"
 
     response = http.request(request)
 
