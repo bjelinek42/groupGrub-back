@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get "/groups/:id" => "groups#show"
 
+  
   post "/vote_restaurants" => "vote_restaurants#create"
   patch "/vote_restaurants" => "vote_restaurants#update"
+
 end

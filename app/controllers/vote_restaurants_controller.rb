@@ -15,11 +15,12 @@ class VoteRestaurantsController < ApplicationController
       tally[restaurant.id] += 1
     end
     top_three = []
-    i = 0
-    3.times do
-      top_three << tally.max_by{ |_k,v| v}[i]
-      i += 1
-    end
+    top_three = tally.sort_by { |_k, v| -v }.first(3).map(&:first)
+    # i = 0
+    # 3.times do
+    #   top_three << tally.max_by{ |_k,v| v}[i]
+    #   i += 1
+    # end
     sanity = []
     j = 0
     group.users.length.times do
@@ -33,7 +34,7 @@ class VoteRestaurantsController < ApplicationController
           vote: false,
           user_id: user_id
         )
-        vr.save
+        # vr.save
         i += 1
         sanity << vr
       end
