@@ -15,7 +15,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "ben@gmail.com",
+  "email": "travis@gmail.com",
   "password": "password"
 }
 
@@ -58,7 +58,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTA5MDk3O
 
 ###
 POST http://localhost:3000/vote_restaurants
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTIyMDM2NDR9.Q0wOZG2Ik2U5SoJKRiOH1qM9TZXwBC8nqJTHIEGj8nM
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTIyMTM2MjZ9.zlwbMSzBR66Rxg9bTOnNelGjwT6c07yw_z00KEoALgM
 
 ###
 PATCH http://localhost:3000/vote_restaurants
@@ -71,4 +71,4 @@ content-type: application/json
 
 ###
 GET http://localhost:3000/vote_restaurants
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTIyMDM2NDR9.Q0wOZG2Ik2U5SoJKRiOH1qM9TZXwBC8nqJTHIEGj8nM
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTIyMTI2MDF9.BoWyZ81DknFypjq3IRV1uCtdMmGssD-2QwqfDAHKCl0
