@@ -33,6 +33,7 @@ class VoteRestaurantsController < ApplicationController
           vote: false,
           user_id: user_id
         )
+        vr.save
         i += 1
         sanity << vr
       end
@@ -41,4 +42,10 @@ class VoteRestaurantsController < ApplicationController
     render json: sanity
   end
 
+  def update
+    vr = VoteRestaurant.find(params[:id])
+    vr.vote = true
+    
+    render json: vr
+  end
 end
