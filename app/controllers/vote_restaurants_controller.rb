@@ -34,7 +34,7 @@ class VoteRestaurantsController < ApplicationController
           vote: false,
           user_id: user_id
         )
-        # vr.save
+        vr.save
         i += 1
         sanity << vr
       end
@@ -46,7 +46,21 @@ class VoteRestaurantsController < ApplicationController
   def update
     vr = VoteRestaurant.find(params[:id])
     vr.vote = true
-    
+    vr.save
     render json: vr
+  end
+
+  def index
+    user = current_user
+    restaurants = []
+    vote_hash = {}
+    vr = VoteRestaurant.where(user_id: 1) #current_user.id
+    vr.each do |option|
+      r = Restaurant.find(option.restaurant_id)
+      vote_hash = {}
+      vote_hash[option.id] = r
+      restaurants << vote_hash
+    end
+    render json: restaurants
   end
 end
