@@ -16,6 +16,6 @@ Rails.application.routes.draw do
 
   get "/groups/:id" => "groups#show"
 
-  post "/vote_restaurant" => "vote_restaurant#create"
+  post "/vote_restaurants" => "vote_restaurants#create"
   
 end
