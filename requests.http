@@ -58,3 +58,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTA5MDk3O
 
 ###
 POST http://localhost:3000/vote_restaurants
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTIyMDM2NDR9.Q0wOZG2Ik2U5SoJKRiOH1qM9TZXwBC8nqJTHIEGj8nM
