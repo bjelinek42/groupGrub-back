@@ -1,0 +1,2 @@
+class VoteRestaurant < ApplicationRecord
+end
