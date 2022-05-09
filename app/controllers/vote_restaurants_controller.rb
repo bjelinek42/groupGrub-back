@@ -1,0 +1,2 @@
+class VoteRestaurantsController < ApplicationController
+end
