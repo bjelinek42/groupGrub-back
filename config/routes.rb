@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   post "/vote_restaurants" => "vote_restaurants#create"
   patch "/vote_restaurants/:id" => "vote_restaurants#update"
 
+  delete "/restaurant_users" => "restaurant_users#destroy"
+
 end
