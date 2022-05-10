@@ -15,7 +15,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "ben@gmail.com",
+  "email": "jimmy@gmail.com",
   "password": "password"
 }
 
@@ -53,8 +53,8 @@ content-type: application/json
 }
 
 ###
-GET http://localhost:3000/groups/2.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTIyOTI3NDZ9.h-tSucTNFFvc97Lmri1BCgZMDsMbj12cMBJR543MQO8
+GET http://localhost:3000/groups/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTIyOTU2MjZ9.fgCf8wXhP1zYrubF_ERPcOxwNiWPJirvSBxSb_Ly_a0
 
 ###
 POST http://localhost:3000/vote_restaurants

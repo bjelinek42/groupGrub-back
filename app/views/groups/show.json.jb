@@ -1,5 +1,6 @@
 {
   group: @group,
   winning_restaurant: @winning_restaurant,
-  users: @group.users
+  users: @group.users,
+  all_votes: @all_votes
 }

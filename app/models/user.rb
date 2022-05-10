@@ -4,5 +4,5 @@ class User < ApplicationRecord
   has_many :restaurants, through: :restaurant_users
   belongs_to :group
   validates :email, presence: true, uniqueness: true
-  belongs_to :vote_restaurant
+  belongs_to :vote_restaurant, optional: true
 end
