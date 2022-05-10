@@ -2,6 +2,7 @@ class Group < ApplicationRecord
   has_many :users
   has_many :restaurant_users, through: :users
   belongs_to :vote_restaurant
+  has_many :restaurants
 
   def create_vote
     group = current_user.group
