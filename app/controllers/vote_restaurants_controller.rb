@@ -50,7 +50,6 @@ class VoteRestaurantsController < ApplicationController
   def update
     vr = VoteRestaurant.find(params[:id])
     check_previous = VoteRestaurant.where(user_id: current_user.id)
-    p check_previous
     already_voted = false
     check_previous.each do |vote|
       if vote.vote == true
@@ -60,7 +59,15 @@ class VoteRestaurantsController < ApplicationController
     if already_voted == false
       vr.vote = true
       vr.save
-      render json: {message: "vote placed for #{vr}"}
+      all_votes = VoteRestaurant.where(group_id: current_user.group_id)
+      check_all_votes = VoteRestaurant.where(vote: true, group_id: current_user.group_id)
+      if check_all_votes.length == current_user.group.users.length
+        all_votes.each do |vote|
+          vote.active = false
+          vote.save
+        end
+      end
+      render json: {message: "Your vote has been recorded"}
     else
       render json: {message: "You have already voted. No ballot stuffing!"}
     end
