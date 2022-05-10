@@ -1,0 +1,5 @@
+{
+  group: @group,
+  winning_restaurant: @winning_restaurant,
+  users: @group.users
+}
