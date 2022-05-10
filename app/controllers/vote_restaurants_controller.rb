@@ -62,7 +62,7 @@ class VoteRestaurantsController < ApplicationController
       vr.save
       render json: {message: "vote placed for #{vr}"}
     else
-      render json: {message: "You have can only vote once"}
+      render json: {message: "You have already voted. No ballot stuffing!"}
     end
   end
 
@@ -71,10 +71,6 @@ class VoteRestaurantsController < ApplicationController
     @restaurants = []
     vote_hash = {}
     @vote_restaurants = VoteRestaurant.where(user_id: current_user.id)
-    # @vote_restaurants.each do |option|
-    #   r = Restaurant.find(option.restaurant_id)
-    #   @restaurants << r
-    # end
     render template: "vote_restaurants/index"
   end
 end
