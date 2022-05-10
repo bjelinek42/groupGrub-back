@@ -49,22 +49,32 @@ class VoteRestaurantsController < ApplicationController
 
   def update
     vr = VoteRestaurant.find(params[:id])
-    vr.vote = true
-    vr.save
-    render json: vr
+    check_previous = VoteRestaurant.where(user_id: current_user.id)
+    p check_previous
+    already_voted = false
+    check_previous.each do |vote|
+      if vote.vote == true
+        already_voted = true
+      end
+    end
+    if already_voted == false
+      vr.vote = true
+      vr.save
+      render json: {message: "vote placed for #{vr}"}
+    else
+      render json: {message: "You have can only vote once"}
+    end
   end
 
   def index
     user = current_user
-    restaurants = []
+    @restaurants = []
     vote_hash = {}
-    vr = VoteRestaurant.where(user_id: current_user.id)
-    vr.each do |option|
-      r = Restaurant.find(option.restaurant_id)
-      vote_hash = {}
-      vote_hash[option.id] = r
-      restaurants << vote_hash
-    end
-    render json: vr
+    @vote_restaurants = VoteRestaurant.where(user_id: current_user.id)
+    # @vote_restaurants.each do |option|
+    #   r = Restaurant.find(option.restaurant_id)
+    #   @restaurants << r
+    # end
+    render template: "vote_restaurants/index"
   end
 end

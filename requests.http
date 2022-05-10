@@ -58,7 +58,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTA5MDk3O
 
 ###
 POST http://localhost:3000/vote_restaurants
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTIyMTM2MjZ9.zlwbMSzBR66Rxg9bTOnNelGjwT6c07yw_z00KEoALgM
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTIyMTI2MDF9.BoWyZ81DknFypjq3IRV1uCtdMmGssD-2QwqfDAHKCl0
 
 ###
 PATCH http://localhost:3000/vote_restaurants
@@ -70,5 +70,5 @@ content-type: application/json
 }
 
 ###
-GET http://localhost:3000/vote_restaurants
+GET http://localhost:3000/vote_restaurants.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTIyMTI2MDF9.BoWyZ81DknFypjq3IRV1uCtdMmGssD-2QwqfDAHKCl0

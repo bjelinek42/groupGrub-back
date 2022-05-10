@@ -1,0 +1,6 @@
+@vote_restaurants.map do |vote_restaurant|
+  {
+    id: vote_restaurant.id,
+    restaurant: Restaurant.find(vote_restaurant.restaurant_id)
+  }
+end

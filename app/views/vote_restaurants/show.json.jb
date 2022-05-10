@@ -1,0 +1,5 @@
+{
+  id: @vote_restaurant.id,
+  created_at: @vote_restaurant.created_at,
+  updated_at: @vote_restaurant.updated_at
+}
