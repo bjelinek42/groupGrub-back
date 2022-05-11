@@ -19,11 +19,6 @@ class VoteRestaurantsController < ApplicationController
       end
       top_three = []
       top_three = tally.sort_by { |_k, v| -v }.first(3).map(&:first)
-      # i = 0
-      # 3.times do
-      #   top_three << tally.max_by{ |_k,v| v}[i]
-      #   i += 1
-      # end
       sanity = []
       j = 0
       group.users.length.times do
@@ -49,7 +44,7 @@ class VoteRestaurantsController < ApplicationController
 
   def update
     vr = VoteRestaurant.find(params[:id])
-    check_previous = VoteRestaurant.where(user_id: current_user.id)
+    check_previous = VoteRestaurant.where(user_id: current_user.id, active: true)
     already_voted = false
     check_previous.each do |vote|
       if vote.vote == true
@@ -77,7 +72,7 @@ class VoteRestaurantsController < ApplicationController
     user = current_user
     @restaurants = []
     vote_hash = {}
-    @vote_restaurants = VoteRestaurant.where(user_id: current_user.id)
+    @vote_restaurants = VoteRestaurant.where(user_id: current_user.id, active: true)
     render template: "vote_restaurants/index"
   end
 end
