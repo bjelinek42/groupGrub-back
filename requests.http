@@ -57,6 +57,9 @@ GET http://localhost:3000/groups/1.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTIyOTU2MjZ9.fgCf8wXhP1zYrubF_ERPcOxwNiWPJirvSBxSb_Ly_a0
 
 ###
+GET http://localhost:3000/groups.json
+
+###
 POST http://localhost:3000/vote_restaurants
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTIyMTI2MDF9.BoWyZ81DknFypjq3IRV1uCtdMmGssD-2QwqfDAHKCl0
 

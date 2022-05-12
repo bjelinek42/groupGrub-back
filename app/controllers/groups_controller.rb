@@ -15,4 +15,8 @@ class GroupsController < ApplicationController
     render template: "groups/show"
   end
 
+  def index
+    g = Group.all
+    render json: g
+  end
 end
