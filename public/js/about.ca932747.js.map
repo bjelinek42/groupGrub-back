@@ -1,0 +1,1 @@
+{"version":3,"file":"js/about.ca932747.js","mappings":"oIAAA,MAAMA,EAAS,GAETC,EAAcD,EAEpB","sources":["webpack://groupgrub-front/./src/views/AboutView.vue"],"sourcesContent":["const script = {}\n\nconst __exports__ = script;\n\nexport default __exports__"],"names":["script","__exports__"],"sourceRoot":""}

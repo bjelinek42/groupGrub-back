@@ -23,4 +23,5 @@ Rails.application.routes.draw do
 
   delete "/restaurant_users" => "restaurant_users#destroy"
 
+  get "/*path" => proc { [200, {}, [ActionView::Base.new.render(file: 'public/index.html')]] }
 end

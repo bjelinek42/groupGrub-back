@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkgroupgrub_front"]=self["webpackChunkgroupgrub_front"]||[]).push([[443],{7506:function(u,r,n){n.r(r);const t={},e=t;r["default"]=e}}]);
+//# sourceMappingURL=about.ca932747.js.map
