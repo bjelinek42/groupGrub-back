@@ -6,6 +6,8 @@ groupGrub is an app that aims to reduce the frustration when groups are trying t
 
 Usernames and passwords can be found in seeds file
 
+View on heroku (still a work in progress): https://desolate-shore-45884.herokuapp.com/
+
 ## Installation
 
 Uses Ruby 3.0.3 and Rails 7.0.2.3. Clone and bundle install
