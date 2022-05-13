@@ -88,15 +88,6 @@ class RestaurantsController < ApplicationController
     response = http.request(request)
     response = JSON.parse(response.read_body)["results"]["data"]
     cities = gather_cities(response)
-    # cities = []
-    # response.each do |city|
-    #   location = {}
-    #   name = city["result_object"]["location_string"]
-    #   location_id = city["result_object"]["location_id"]
-    #   location["city"] = name
-    #   location["location_id"] = location_id
-    #   cities << location
-    # end
     render json: cities
   end
 
