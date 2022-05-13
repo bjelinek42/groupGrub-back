@@ -8,9 +8,13 @@ groupGrub is an app that aims to reduce the frustration when groups are trying t
 
 ## Installation
 
-Backend:
-
 Uses Ruby 3.0.3 and Rails 7.0.2.3. Clone and bundle install
+
+Clone
+
+```bash
+git clone https://github.com/bjelinek42/groupGrub-back.git
+```
 
 ```bash
 bundle install

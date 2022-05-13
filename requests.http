@@ -1,13 +1,15 @@
+@jwt = 
+
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Sarah",
-  "email": "sarah@gmail.com",
-  "password": "password",
-  "password_confirmation": "password",
-  "group_id": 3
+  "name": "",
+  "email": "",
+  "password": "",
+  "password_confirmation": "",
+  "group_id": 
 }
 
 ### Sessions create (login)
@@ -15,25 +17,25 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "jimmy@gmail.com",
+  "email": "jimmy@email.com",
   "password": "password"
 }
 
 ###
 GET http://localhost:3000/users/1.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA4MzczODh9.ZBMfAaqMxGmACj0sFsNq8Jlr2rPvLSAsYYD3mxu_kxg
+Authorization: Bearer {{jwt}}
 
 ###
 GET http://localhost:3000/restaurants.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTEzMzQ1NzZ9.V1rTM6MvfKInVZojeiltqpPa73qRsIWV2inP2jP7B3E
+Authorization: Bearer {{jwt}}
 
 ###
 GET http://localhost:3000/restaurants/search.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTEzMzQ1NzZ9.V1rTM6MvfKInVZojeiltqpPa73qRsIWV2inP2jP7B3E
+Authorization: Bearer {{jwt}}
 
 ###
 POST http://localhost:3000/restaurants/search.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTEzMzQ1NzZ9.V1rTM6MvfKInVZojeiltqpPa73qRsIWV2inP2jP7B3E
+Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
@@ -42,7 +44,7 @@ content-type: application/json
 
 ###
 POST http://localhost:3000/restaurants.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA4MzczODh9.ZBMfAaqMxGmACj0sFsNq8Jlr2rPvLSAsYYD3mxu_kxg
+Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
@@ -54,18 +56,18 @@ content-type: application/json
 
 ###
 GET http://localhost:3000/groups/1.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTIyOTU2MjZ9.fgCf8wXhP1zYrubF_ERPcOxwNiWPJirvSBxSb_Ly_a0
+Authorization: Bearer {{jwt}}
 
 ###
 GET http://localhost:3000/groups.json
 
 ###
 POST http://localhost:3000/vote_restaurants
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTIyMTI2MDF9.BoWyZ81DknFypjq3IRV1uCtdMmGssD-2QwqfDAHKCl0
+Authorization: Bearer {{jwt}}
 
 ###
 PATCH http://localhost:3000/vote_restaurants
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTIyMDM2NDR9.Q0wOZG2Ik2U5SoJKRiOH1qM9TZXwBC8nqJTHIEGj8nM
+Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
@@ -74,4 +76,4 @@ content-type: application/json
 
 ###
 GET http://localhost:3000/vote_restaurants.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NTIyMTI2MDF9.BoWyZ81DknFypjq3IRV1uCtdMmGssD-2QwqfDAHKCl0
+Authorization: Bearer {{jwt}}
