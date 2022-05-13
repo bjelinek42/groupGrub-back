@@ -1,6 +1,10 @@
 # groupGrub Backend
 
+This is the API for [groupGrub Frontend](https://github.com/bjelinek42/groupGrub-front).
+
 groupGrub is an app that aims to reduce the frustration when groups are trying to decide democratically where they will go out to eat together. Each user is a part of a group, and each user has a profile with favorite restaurants. When a group decides they want to go out to eat, a member can create a new vote which will take all the favorites from each user and find the top three most popular restaurants. These three restaurants will then be voted on by each member. Following the vote, the winning restaurant will be displayed on the group page. No more awkwardness deciding where to eat!
+
+
 
 ## Installation
 
@@ -41,9 +45,7 @@ The vote_restaurants controller is where the vote is generated and tallied. only
 
 -Ability to create groups
 
--more restaurant choices from API
-
--users can be in multiple groups
+-Users can be in multiple groups
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
