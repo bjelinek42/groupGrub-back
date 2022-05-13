@@ -28,16 +28,18 @@ class VoteRestaurantsController < ApplicationController
         if all_votes_in == true
           inactivate_vote()
           save_winning_restaurant_to_group(winning_restaurant)
+          render json: {message: "Your vote has been recorded, and all votes are in.", all_votes_in: true}
         end
+      else
+        render json: {message: "Your vote has been recorded"}
       end
-      render json: {message: "Your vote has been recorded"}
     else
       render json: {message: "You have already voted. No ballot stuffing!"}
     end
   end
 
   def index
-    user = current_user
+    @user = current_user
     @restaurants = []
     vote_hash = {}
     @vote_restaurants = VoteRestaurant.where(user_id: current_user.id, active: true)
