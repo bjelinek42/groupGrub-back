@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
   
   def create
     if current_user
-      duplicate_restaurant = duplicate_restaurant?()
+      duplicate_restaurant = duplicate_restaurant?(params[:location_id])
       duplicate_favorite = duplicate_favorite?(params[:location_id])
       restaurant = Restaurant.new(
         name: params[:name],
@@ -77,12 +77,12 @@ class RestaurantsController < ApplicationController
     render json: cities
   end
 
-  def duplicate_restaurant?()
+  def duplicate_restaurant?(location_id)
     duplicate = false
     all_restaurants = Restaurant.all
     while true
       all_restaurants.each do |eatery|
-        if eatery.location_id == params[:location_id]
+        if eatery.location_id == location_id
           duplicate = true
           break
         end
@@ -95,7 +95,9 @@ class RestaurantsController < ApplicationController
   def duplicate_favorite?(location_id)
     duplicate = false
     all_user_favorites = RestaurantUser.where(user_id: current_user.id)
+    p all_user_favorites
     restaurant = Restaurant.find_by(location_id: location_id)
+    p restaurant
     all_user_favorites.each do |favorite|
       if favorite.restaurant_id == restaurant.id
         duplicate = true
