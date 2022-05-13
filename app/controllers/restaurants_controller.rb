@@ -10,7 +10,7 @@ class RestaurantsController < ApplicationController
   def create
     if current_user
       duplicate_restaurant = duplicate_restaurant?()
-      duplicate_favorite = duplicate_favorite?()
+      duplicate_favorite = duplicate_favorite?(params[:location_id])
       restaurant = Restaurant.new(
         name: params[:name],
         cuisines: params[:cuisines],
@@ -92,30 +92,29 @@ class RestaurantsController < ApplicationController
     return duplicate
   end
 
-  def duplicate_favorite?()
+  def duplicate_favorite?(location_id)
     duplicate = false
     all_user_favorites = RestaurantUser.where(user_id: current_user.id)
-    restaurant = Restaurant.find_by(location_id: params[:location_id])
+    restaurant = Restaurant.find_by(location_id: location_id)
     all_user_favorites.each do |favorite|
       if favorite.restaurant_id == restaurant.id
         duplicate = true
         break
       end
     end
+    return duplicate
   end
 
   def save_restaurant_and_favorite(restaurant)
     restaurant.save!
     ru = RestaurantUser.new(user_id: current_user.id, restaurant_id: restaurant.id)
     ru.save!
-    render json: restaurant
   end
 
   def save_favorite(restaurant)
     restaurant = Restaurant.find_by(location_id: params[:location_id])
     ru = RestaurantUser.new(user_id: current_user.id, restaurant_id: restaurant.id)
     ru.save!
-    render json: ru
   end
 
   def gather_cities(response)
