@@ -46,7 +46,7 @@ class RestaurantsController < ApplicationController
     request = Net::HTTP::Post.new(url)
     request["content-type"] = 'application/x-www-form-urlencoded'
     request["X-RapidAPI-Host"] = 'worldwide-restaurants.p.rapidapi.com'
-    request["X-RapidAPI-Key"] = Rails.application.credentials.ww_restaurants_api_key
+    request["X-RapidAPI-Key"] = ENV["RESTAURANT_API"]
     request.body = "language=en_US&limit=1000&location_id=#{location_id}&currency=USD"
 
     response = http.request(request)
@@ -68,7 +68,7 @@ class RestaurantsController < ApplicationController
     request = Net::HTTP::Post.new(url)
     request["content-type"] = 'application/x-www-form-urlencoded'
     request["X-RapidAPI-Host"] = 'worldwide-restaurants.p.rapidapi.com'
-    request["X-RapidAPI-Key"] = Rails.application.credentials.ww_restaurants_api_key
+    request["X-RapidAPI-Key"] = ENV["RESTAURANT_API"]
     request.body = "q=#{params[:currentCity]}&language=en_US"
 
     response = http.request(request)
