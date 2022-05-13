@@ -9,18 +9,8 @@ class RestaurantsController < ApplicationController
   
   def create
     if current_user
-      duplicate = duplicate_restaurant?()
-      # duplicate = false
-      # all_restaurants = Restaurant.all
-      # while true
-      #   all_restaurants.each do |eatery|
-      #     if eatery.location_id == params[:location_id]
-      #       duplicate = true
-      #       break
-      #     end
-      #   end
-      #   break
-      # end
+      duplicate_restaurant = duplicate_restaurant?()
+      duplicate_favorite = duplicate_favorite?()
       restaurant = Restaurant.new(
         name: params[:name],
         cuisines: params[:cuisines],
@@ -28,18 +18,14 @@ class RestaurantsController < ApplicationController
         image: params[:image],
         location_id: params[:location_id],
       )
-      if duplicate == false
+      if duplicate_restaurant == false
         save_restaurant_and_favorite(restaurant)
-        # restaurant.save
-        # ru = RestaurantUser.new(user_id: current_user.id, restaurant_id: restaurant.id)
-        # ru.save
-        # render json: restaurant
-      else
+        render json: {message: "Favorite restaurant saved"}
+      elsif duplicate_favorite == false
         save_favorite(restaurant)
-        # restaurant = Restaurant.find_by(location_id: params[:location_id])
-        # ru = RestaurantUser.new(user_id: current_user.id, restaurant_id: restaurant.id)
-        # ru.save
-        # render json: ru
+        render json: {message: "Favorite restaurant saved"}
+      elsif duplicate_favorite == true
+        render json: {message: 'Restaurant has already been added to favorites'}
       end
     else
       render json: {message: "You must be logged in to create a new restaurant"}
@@ -104,6 +90,18 @@ class RestaurantsController < ApplicationController
       break
     end
     return duplicate
+  end
+
+  def duplicate_favorite?()
+    duplicate = false
+    all_user_favorites = RestaurantUser.where(user_id: current_user.id)
+    restaurant = Restaurant.find_by(location_id: params[:location_id])
+    all_user_favorites.each do |favorite|
+      if favorite.restaurant_id == restaurant.id
+        duplicate = true
+        break
+      end
+    end
   end
 
   def save_restaurant_and_favorite(restaurant)
