@@ -5,23 +5,23 @@ Group.create!([
   {name: "Home", restaurant_id: nil}
 ])
 User.create!([
-  {name: "Jimmy", email: "jimmy@email.com", password_digest: "$2a$12$ypJti4b20uiOX9jOnVq5uujR/DAmpDg/lrnFDWZyLz/.VLDwBme1y", group_id: 1},
-  {name: "Drew", email: "drew@email.com", password_digest: "$2a$12$yhd8roV2LU.7c6OIz.RvTuxIeUbfQZqcEjpwpPst8IX0ceEw2vuTe", group_id: 1},
-  {name: "Zac", email: "zac@email.com", password_digest: "$2a$12$a7CGS6FMLNk4YF/rwbsNPOVCBm4HCWDcGbEFO3dYHbWluHLyHP2jy", group_id: 1},
-  {name: "Travis", email: "travis@email.com", password_digest: "$2a$12$TIcdEfQPYhrhag44UEXGZ.7E6bHe/OY6KeUM./jwg2m8dkiN8yMuG", group_id: 2},
-  {name: "Erica", email: "erica@email.com", password_digest: "$2a$12$DlDVtgqxVn/IV38V.i0ACe74zWVkc5rNWpiyJ5H2oiErk5Z0Z0NDO", group_id: 2},
-  {name: "Steve", email: "steve@email.com", password_digest: "$2a$12$Nean7Y7kMGuCujaF/rigQOPet.MxCuLxaz8CTVG60SdT9dPp12wk.", group_id: 2},
-  {name: "Rachel", email: "rachel@email.com", password_digest: "$2a$12$J.EVcAoh3WJn8IlKIparvO49qCpbKkJaZTwxC0dyQRFEXFdJPVpUa", group_id: 2},
-  {name: "Sam", email: "sam@email.com", password_digest: "$2a$12$3.Gq0HD8Oo5n1.DEVDUG6eUG6NQC/noxyAPRdSrwkPeikqbJ/0f5a", group_id: 2},
-  {name: "Todd", email: "todd@email.com", password_digest: "$2a$12$LDUwzMbtxJjbGeXw0fcvJOwImDy4wEMbLK3./OupfuVIfQlO7.Qqi", group_id: 2},
-  {name: "Mary", email: "mary@email.com", password_digest: "$2a$12$vuVIGLCYJ28NdAHHa9Ctc.N2euUGJWgCOaVgVKbh5kHOibRBgHcpy", group_id: 2},
-  {name: "Shannon", email: "shannon@email.com", password_digest: "$2a$12$doaNLNYzdnyB66pacSGoF.Fa3n5rQFa.92G7OEIo5DnPTRNQ0dn6G", group_id: 2},
-  {name: "Logan", email: "logan@lyft.com", password_digest: "$2a$12$vxFJxOdzIqnCMHh2y.A1Je0cIZZPsL4uVpsFo1DthN0ZRA0BDPB5G", group_id: 3},
-  {name: "John", email: "john@lyft.com", password_digest: "$2a$12$ZuUo2xY5TnkDumKmv0exn.8U39Qc1tyVMWsREZC/AkDVt7gWU.r9i", group_id: 3},
-  {name: "Elaine", email: "elaine@lyft.com", password_digest: "$2a$12$zf24SFK0JghxUW90LpAu2uJp0MWOa8ERrcpXRnayYNp4Qql6J4GM2", group_id: 3},
-  {name: "Ashwin", email: "ashwin@lyft.com", password_digest: "$2a$12$g/aj2DHvKXVfx6CxmvxaCOvu/yPW0wt/wwMkA2wlDvcZiYEvzcmHi", group_id: 3},
-  {name: "Kristin", email: "kristin@lyft.com", password_digest: "$2a$12$EvVlKEyu1GD7DG/WZCci.OSahdCbbIArtUzF.Wfc0OCw0k7tldp.K", group_id: 3},
-  {name: "Ben", email: "ben@lyft.com", password_digest: "$2a$12$EhiJHjVf8GaMBObEmIaBKu.O1BHLWV0pJUN211MIaxk75vVnxJZnK", group_id: 3}
+  {name: "Jimmy", email: "jimmy@email.com", password: "password", group_id: 1},
+  {name: "Drew", email: "drew@email.com", password: "password", group_id: 1},
+  {name: "Zac", email: "zac@email.com", password: "password", group_id: 1},
+  {name: "Travis", email: "travis@email.com", password: "password", group_id: 2},
+  {name: "Erica", email: "erica@email.com", password: "password", group_id: 2},
+  {name: "Steve", email: "steve@email.com", password: "password", group_id: 2},
+  {name: "Rachel", email: "rachel@email.com", password: "password", group_id: 2},
+  {name: "Sam", email: "sam@email.com", password: "password", group_id: 2},
+  {name: "Todd", email: "todd@email.com", password: "password", group_id: 2},
+  {name: "Mary", email: "mary@email.com", password: "password", group_id: 2},
+  {name: "Shannon", email: "shannon@email.com", password: "password", group_id: 2},
+  {name: "Logan", email: "logan@lyft.com", password: "password", group_id: 3},
+  {name: "John", email: "john@lyft.com", password: "password", group_id: 3},
+  {name: "Elaine", email: "elaine@lyft.com", password: "password" group_id: 3},
+  {name: "Ashwin", email: "ashwin@lyft.com", password: "password", group_id: 3},
+  {name: "Kristin", email: "kristin@lyft.com", password: "password", group_id: 3},
+  {name: "Ben", email: "ben@lyft.com", password: "password", group_id: 3}
 ])
 Restaurant.create!([
   {name: "Amy's Donuts", cuisines: "American, Fast Food", address: "2704 E Fountain Blvd, Colorado Springs, CO 80910-3233", image: "https://media-cdn.tripadvisor.com/media/photo-l/0f/d1/f5/90/exterior.jpg", location_id: "6218094"},
