@@ -1,43 +1,228 @@
-# user = User.new(name: "Jimmy", email: "jimmy@email.com", password: "password", group_id: 1)
-# user.save
-# user = User.new(name: "Drew", email: "drew@email.com", password: "password", group_id: 1)
-# user.save
-# user = User.new(name: "Zac", email: "zac@email.com", password: "password", group_id: 1)
-# user.save
-# user = User.new(name: "Travis", email: "travis@email.com", password: "password", group_id: 2)
-# user.save
-# user = User.new(name: "Erica", email: "erica@email.com", password: "password", group_id: 2)
-# user.save
-# user = User.new(name: "Steve", email: "steve@email.com", password: "password", group_id: 2)
-# user.save
-# user = User.new(name: "Rachel", email: "rachel@email.com", password: "password", group_id: 2)
-# user.save
-# user = User.new(name: "Sam", email: "sam@email.com", password: "password", group_id: 2)
-# user.save
-# user = User.new(name: "Todd", email: "todd@email.com", password: "password", group_id: 2)
-# user.save
-# user = User.new(name: "Mary", email: "mary@email.com", password: "password", group_id: 2)
-# user.save
-# user = User.new(name: "Shannon", email: "shannon@email.com", password: "password", group_id: 2)
-# user.save
-# user = User.new(name: "Logan", email: "logan@email.com", password: "password", group_id: 3)
-# user.save
-# user = User.new(name: "John", email: "john@email.com", password: "password", group_id: 3)
-# user.save
-# user = User.new(name: "Elaine", email: "elaine@email.com", password: "password", group_id: 3)
-# user.save
-# user = User.new(name: "Ashwin", email: "ashwin@email.com", password: "password", group_id: 3)
-# user.save
-# user = User.new(name: "Kristin", email: "kristin@email.com", password: "password", group_id: 3)
-# user.save
-# user = User.new(name: "Ben", email: "ben@email.com", password: "password", group_id: 3)
-# user.save
-
-# group = Group.new(name: "Ultimate")
-# group.save
-# group = Group.new(name: "Party")
-# group.save
-# group = Group.new(name: "Lyft")
-# group.save
-# group = Group.new(name: "Home")
-# group.save
+RestaurantUser.create!([
+  {restaurant_id: 1, user_id: 1},
+  {restaurant_id: 2, user_id: 1},
+  {restaurant_id: 3, user_id: 1},
+  {restaurant_id: 4, user_id: 1},
+  {restaurant_id: 5, user_id: 1},
+  {restaurant_id: 5, user_id: 2},
+  {restaurant_id: 6, user_id: 2},
+  {restaurant_id: 7, user_id: 2},
+  {restaurant_id: 3, user_id: 2},
+  {restaurant_id: 3, user_id: 3},
+  {restaurant_id: 1, user_id: 3},
+  {restaurant_id: 8, user_id: 3},
+  {restaurant_id: 9, user_id: 3},
+  {restaurant_id: 10, user_id: 3},
+  {restaurant_id: 11, user_id: 4},
+  {restaurant_id: 8, user_id: 4},
+  {restaurant_id: 12, user_id: 4},
+  {restaurant_id: 13, user_id: 4},
+  {restaurant_id: 14, user_id: 4},
+  {restaurant_id: 15, user_id: 4},
+  {restaurant_id: 16, user_id: 5},
+  {restaurant_id: 17, user_id: 5},
+  {restaurant_id: 8, user_id: 5},
+  {restaurant_id: 11, user_id: 5},
+  {restaurant_id: 12, user_id: 5},
+  {restaurant_id: 3, user_id: 6},
+  {restaurant_id: 18, user_id: 6},
+  {restaurant_id: 11, user_id: 6},
+  {restaurant_id: 9, user_id: 6},
+  {restaurant_id: 19, user_id: 6},
+  {restaurant_id: 5, user_id: 7},
+  {restaurant_id: 2, user_id: 7},
+  {restaurant_id: 8, user_id: 7},
+  {restaurant_id: 20, user_id: 7},
+  {restaurant_id: 13, user_id: 7},
+  {restaurant_id: 21, user_id: 7},
+  {restaurant_id: 22, user_id: 7},
+  {restaurant_id: 23, user_id: 8},
+  {restaurant_id: 4, user_id: 8},
+  {restaurant_id: 8, user_id: 8},
+  {restaurant_id: 24, user_id: 8},
+  {restaurant_id: 25, user_id: 8},
+  {restaurant_id: 26, user_id: 8},
+  {restaurant_id: 3, user_id: 9},
+  {restaurant_id: 4, user_id: 9},
+  {restaurant_id: 8, user_id: 9},
+  {restaurant_id: 27, user_id: 9},
+  {restaurant_id: 28, user_id: 9},
+  {restaurant_id: 27, user_id: 10},
+  {restaurant_id: 13, user_id: 10},
+  {restaurant_id: 10, user_id: 10},
+  {restaurant_id: 29, user_id: 10},
+  {restaurant_id: 4, user_id: 10},
+  {restaurant_id: 30, user_id: 11},
+  {restaurant_id: 23, user_id: 11},
+  {restaurant_id: 31, user_id: 11},
+  {restaurant_id: 32, user_id: 11},
+  {restaurant_id: 20, user_id: 11},
+  {restaurant_id: 13, user_id: 11},
+  {restaurant_id: 33, user_id: 12},
+  {restaurant_id: 34, user_id: 12},
+  {restaurant_id: 35, user_id: 12},
+  {restaurant_id: 36, user_id: 12},
+  {restaurant_id: 37, user_id: 12},
+  {restaurant_id: 38, user_id: 12},
+  {restaurant_id: 34, user_id: 13},
+  {restaurant_id: 33, user_id: 13},
+  {restaurant_id: 39, user_id: 13},
+  {restaurant_id: 40, user_id: 13},
+  {restaurant_id: 41, user_id: 13},
+  {restaurant_id: 42, user_id: 13},
+  {restaurant_id: 34, user_id: 14},
+  {restaurant_id: 43, user_id: 14},
+  {restaurant_id: 39, user_id: 14},
+  {restaurant_id: 44, user_id: 14},
+  {restaurant_id: 45, user_id: 14},
+  {restaurant_id: 46, user_id: 14},
+  {restaurant_id: 34, user_id: 15},
+  {restaurant_id: 47, user_id: 15},
+  {restaurant_id: 40, user_id: 15},
+  {restaurant_id: 48, user_id: 15},
+  {restaurant_id: 49, user_id: 16},
+  {restaurant_id: 45, user_id: 16},
+  {restaurant_id: 50, user_id: 16},
+  {restaurant_id: 51, user_id: 16},
+  {restaurant_id: 34, user_id: 16},
+  {restaurant_id: 34, user_id: 17},
+  {restaurant_id: 43, user_id: 17},
+  {restaurant_id: 52, user_id: 17},
+  {restaurant_id: 45, user_id: 17},
+  {restaurant_id: 46, user_id: 17},
+  {restaurant_id: 53, user_id: 17},
+  {restaurant_id: 37, user_id: 17}
+])
+Group.create!([
+  {name: "Ultimate", restaurant_id: 3},
+  {name: "Party", restaurant_id: 8},
+  {name: "Lyft", restaurant_id: 34},
+  {name: "Home", restaurant_id: nil}
+])
+Restaurant.create!([
+  {name: "Amy's Donuts", cuisines: "American, Fast Food", address: "2704 E Fountain Blvd, Colorado Springs, CO 80910-3233", image: "https://media-cdn.tripadvisor.com/media/photo-l/0f/d1/f5/90/exterior.jpg", location_id: "6218094"},
+  {name: "The Melting Pot", cuisines: "American, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "30 E Pikes Peak Ave Suite A, Colorado Springs, CO 80903", image: "https://media-cdn.tripadvisor.com/media/photo-l/13/df/ce/37/boston-lager-cheddar.jpg", location_id: "556853"},
+  {name: "TAPAteria", cuisines: "American, Vegetarian Friendly, Vegan Options, Gluten Free OptionsMediterranean, Spanish, Wine Bar, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "2607 W Colorado Ave, Colorado Springs, CO 80904-3024", image: "https://media-cdn.tripadvisor.com/media/photo-l/03/7a/a0/ff/tapateria.jpg", location_id: "2254964"},
+  {name: "Edelweiss Restaurant", cuisines: "American, Vegetarian Friendly, Vegan Options, Gluten Free OptionsMediterranean, Spanish, Wine Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsGerman, European, Central European, Vegetarian Friendly, Gluten Free Options", address: "34 E Ramona Ave, Colorado Springs, CO 80905-2210", image: "https://media-cdn.tripadvisor.com/media/photo-l/03/86/11/f0/edelweiss-restaurant.jpg", location_id: "386723"},
+  {name: "Carlos Bistro", cuisines: "American, Vegetarian Friendly, Vegan Options, Gluten Free OptionsMediterranean, Spanish, Wine Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsGerman, European, Central European, Vegetarian Friendly, Gluten Free OptionsAmerican, Seafood, Japanese, International, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "1025 S 21st St, Colorado Springs, CO 80904-3705", image: "https://media-cdn.tripadvisor.com/media/photo-l/16/28/ba/46/lobster-salad-with-lobster.jpg", location_id: "1067304"},
+  {name: "Urban Egg a daytime eatery", cuisines: "American, Seafood, Japanese, International, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Cafe, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "28 S Tejon St Ste A, Colorado Springs, CO 80903-1541", image: "https://media-cdn.tripadvisor.com/media/photo-l/04/98/e0/65/tuscan-eggs-benedict.jpg", location_id: "3645473"},
+  {name: "Josh & John's Naturally", cuisines: "American, Seafood, Japanese, International, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Cafe, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican", address: "111 E Pikes Peak Ave, Colorado Springs, CO 80903-1803", image: "https://media-cdn.tripadvisor.com/media/photo-l/08/b0/0e/0f/photo1jpg.jpg", location_id: "818484"},
+  {name: "Front Range Barbeque", cuisines: "Mediterranean, Spanish, Wine Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Fast FoodCajun & Creole, American, Bar, Barbecue, Gluten Free Options", address: "2330 W Colorado Ave, Colorado Springs, CO 80904", image: "https://media-cdn.tripadvisor.com/media/photo-l/01/91/5c/2c/front-entrance.jpg", location_id: "380170"},
+  {name: "Crave Real Burgers - Colorado Springs", cuisines: "Mediterranean, Spanish, Wine Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Fast FoodCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Vegetarian Friendly, Gluten Free Options", address: "7465 N Academy Blvd, Colorado Springs, CO 80920-3204", image: "https://media-cdn.tripadvisor.com/media/photo-l/18/11/5d/ab/cheesy-jane.jpg", location_id: "2318732"},
+  {name: "Summit at The Broadmoor", cuisines: "Mediterranean, Spanish, Wine Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Fast FoodCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Vegetarian Friendly, Gluten Free OptionsFrench, European, Vegetarian Friendly, Gluten Free Options", address: "19 Lake Circle, Colorado Springs, CO 80906", image: "https://media-cdn.tripadvisor.com/media/photo-l/06/73/3b/81/summit-at-the-broadmoor.jpg", location_id: "645977"},
+  {name: "Jack Quinn's Irish Pub & Restaurant", cuisines: "American, Irish, Bar, Vegan Options, Gluten Free Options, Vegetarian Friendly", address: "21 S Tejon St, Colorado Springs, CO 80903-1505", image: "https://media-cdn.tripadvisor.com/media/photo-f/22/29/91/d7/the-best-of-irish-and.jpg", location_id: "490437"},
+  {name: "Rudy's Country Store and Bar-B-Q", cuisines: "American, Irish, Bar, Vegan Options, Gluten Free Options, Vegetarian FriendlyCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Barbecue, Gluten Free Options", address: "315 S 31st St, Colorado Springs, CO 80904-3152", image: "https://media-cdn.tripadvisor.com/media/photo-l/02/a5/8b/c0/filename-dsc04558-jpg.jpg", location_id: "1888795"},
+  {name: "Ted's Montana Grill", cuisines: "American, Irish, Bar, Vegan Options, Gluten Free Options, Vegetarian FriendlyCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Barbecue, Gluten Free OptionsAmerican, Steakhouse, Bar, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "1685 Briargate Pkwy, Colorado Springs, CO 80920-7691", image: "https://media-cdn.tripadvisor.com/media/photo-l/08/a8/dd/e3/photo3jpg.jpg", location_id: "380562"},
+  {name: "Colorado Mountain Brewery", cuisines: "American, Irish, Bar, Vegan Options, Gluten Free Options, Vegetarian FriendlyCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Barbecue, Gluten Free OptionsAmerican, Steakhouse, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Bar, Pub, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "1110 Interquest Pkwy, Colorado Springs, CO 80921-4182", image: "https://media-cdn.tripadvisor.com/media/photo-l/10/d8/b0/df/colorado-mountain-brewery.jpg", location_id: "5075943"},
+  {name: "The Hotel Bar at The Broadmoor", cuisines: "American, Bar", address: "The Broadmoor, 1 Lake Avenue, Colorado Springs, CO 80906", image: "https://media-cdn.tripadvisor.com/media/photo-f/06/fb/e8/cc/the-bar-at-the-broadmoor.jpg", location_id: "7269784"},
+  {name: "Caspian Cafe Mediterranean", cuisines: "Mediterranean, Greek, Middle Eastern, Persian, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "4375 Sinton Rd, Colorado Springs, CO 80907-4235", image: "https://media-cdn.tripadvisor.com/media/photo-l/06/66/94/65/tiger-shrimp-cherry-balsamic.jpg", location_id: "1482895"},
+  {name: "Urban Egg a daytime eatery", cuisines: "Mediterranean, Greek, Middle Eastern, Persian, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Cafe, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "5262 N Nevada Ave Ste 100, Colorado Springs, CO 80918", image: "https://media-cdn.tripadvisor.com/media/photo-l/0e/96/ca/6c/out-front.jpg", location_id: "7100944"},
+  {name: "Shuga's Restaurant", cuisines: "Mediterranean, Spanish, Wine Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Soups, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "702 S Cascade Ave, Colorado Springs, CO 80903-4004", image: "https://media-cdn.tripadvisor.com/media/photo-f/0c/8d/66/19/shuga-s-board.jpg", location_id: "836906"},
+  {name: "Falcon's Bar & Grill", cuisines: "Mediterranean, Spanish, Wine Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Soups, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Irish, Bar, Vegan Options, Gluten Free Options, Vegetarian FriendlyAmerican, Vegetarian Friendly, Gluten Free OptionsAmerican, Bar, Vegetarian Friendly, Vegan Options", address: "8110 N Academy Blvd, Colorado Springs, CO 80920-3904", image: "https://media-cdn.tripadvisor.com/media/photo-l/21/70/0a/ce/sports-bar.jpg", location_id: "1964474"},
+  {name: "The Skirted Heifer", cuisines: "American, Seafood, Japanese, International, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Vegetarian Friendly, Vegan Options, Gluten Free OptionsCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Gluten Free Options", address: "204 N Tejon St, Colorado Springs, CO 80903-1350", image: "https://media-cdn.tripadvisor.com/media/photo-l/0c/f9/cf/20/img-0001-largejpg.jpg", location_id: "6654216"},
+  {name: "NaRai Thai Restaurant", cuisines: "American, Seafood, Japanese, International, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Vegetarian Friendly, Vegan Options, Gluten Free OptionsCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Gluten Free OptionsAmerican, Steakhouse, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAsian, Thai, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "805 Village Center Dr, Colorado Springs, CO 80919-3603", image: "https://media-cdn.tripadvisor.com/media/photo-l/02/a7/82/85/2012-new-decor.jpg", location_id: "2254965"},
+  {name: "Thunder & Buttons II", cuisines: "American, Seafood, Japanese, International, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Vegetarian Friendly, Vegan Options, Gluten Free OptionsCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Gluten Free OptionsAmerican, Steakhouse, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAsian, Thai, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Grill, Vegetarian Friendly, Vegan Options", address: "2415 W Colorado Ave, Colorado Springs, CO 80904-3021", image: "https://media-cdn.tripadvisor.com/media/photo-l/05/90/09/9b/fish-and-chips-perfect.jpg", location_id: "2011066"},
+  {name: "The Rabbit Hole", cuisines: "American, Bar, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "101 N Tejon St, Colorado Springs, CO 80903-1419", image: "https://media-cdn.tripadvisor.com/media/photo-l/0d/6a/c4/05/truffle-cauliflower-mac.jpg", location_id: "3158804"},
+  {name: "Odyssey Gastropub", cuisines: "American, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsGerman, European, Central European, Vegetarian Friendly, Gluten Free OptionsCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Bar, Pub, Gastropub, Vegetarian Friendly, Gluten Free Options", address: "311 N Tejon St, Colorado Springs, CO 80903-1223", image: "https://media-cdn.tripadvisor.com/media/photo-l/0d/5e/83/9b/odyssey-gastropub.jpg", location_id: "7357062"},
+  {name: "Bonefish Grill", cuisines: "American, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsGerman, European, Central European, Vegetarian Friendly, Gluten Free OptionsCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Bar, Pub, Gastropub, Vegetarian Friendly, Gluten Free OptionsAmerican, Seafood, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "5102 N Nevada Ave, Colorado Springs, CO 80918-8679", image: "https://media-cdn.tripadvisor.com/media/photo-l/0b/24/35/42/such-a-wonderful-restaurant.jpg", location_id: "1180565"},
+  {name: "Omelette Parlor", cuisines: "American, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsGerman, European, Central European, Vegetarian Friendly, Gluten Free OptionsCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, Bar, Pub, Gastropub, Vegetarian Friendly, Gluten Free OptionsAmerican, Seafood, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "900 E Fillmore St, Colorado Springs, CO 80907-6383", image: "https://media-cdn.tripadvisor.com/media/photo-l/0f/51/ec/cc/photo0jpg.jpg", location_id: "380206"},
+  {name: "Margarita At Pine Creek", cuisines: "Mediterranean, Spanish, Wine Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsGerman, European, Central European, Vegetarian Friendly, Gluten Free OptionsCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, International, Contemporary, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "7350 Pine Creek Rd, Colorado Springs, CO 80919-2626", image: "https://media-cdn.tripadvisor.com/media/photo-l/09/86/84/11/margarita-at-pine-creek.jpg", location_id: "380350"},
+  {name: "Phantom Canyon Brewing Co", cuisines: "Mediterranean, Spanish, Wine Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsGerman, European, Central European, Vegetarian Friendly, Gluten Free OptionsCajun & Creole, American, Bar, Barbecue, Gluten Free OptionsAmerican, International, Contemporary, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Bar, Pub, Brew Pub, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "2 E Pikes Peak Ave, Colorado Springs, CO 80903-1504", image: "https://media-cdn.tripadvisor.com/media/photo-l/18/16/ad/a5/photo1jpg.jpg", location_id: "380011"},
+  {name: "Pizzeria Rustica", cuisines: "American, International, Contemporary, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Steakhouse, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsFrench, European, Vegetarian Friendly, Gluten Free OptionsItalian, Pizza, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "2527 W Colorado Ave, Colorado Springs, CO 80904-3096", image: "https://media-cdn.tripadvisor.com/media/photo-l/02/d3/4c/ac/pizzeria-rustica.jpg", location_id: "1581300"},
+  {name: "La Baguette - Old Colorado City", cuisines: "French, Cafe, European, Soups, Vegetarian Friendly", address: "2417 W Colorado Ave, Colorado Springs, CO 80904-3021", image: "https://media-cdn.tripadvisor.com/media/photo-l/12/22/25/14/la-baguette-facade.jpg", location_id: "380165"},
+  {name: "Jake & Telly's Greek Cuisine", cuisines: "French, Cafe, European, Soups, Vegetarian FriendlyAmerican, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsMediterranean, Greek, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "2616 W Colorado Ave Ste 24, Colorado Springs, CO 80904-3073", image: "https://media-cdn.tripadvisor.com/media/photo-l/0f/c3/76/40/photo1jpg.jpg", location_id: "380191"},
+  {name: "Golden Bee", cuisines: "French, Cafe, European, Soups, Vegetarian FriendlyAmerican, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsMediterranean, Greek, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Bar, British, Pub, Gastropub", address: "1 Lake Ave Located on Lake Avenue and First Street across from Broadmoor Main., Colorado Springs, CO 80906-4269", image: "https://media-cdn.tripadvisor.com/media/photo-l/14/a3/91/5a/slow-roasted-beef-short.jpg", location_id: "3387292"},
+  {name: "Mersea Restaurant & Bar", cuisines: "American, Bar, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "699 Avenue of the Palms Treasure Island, San Francisco, CA 94130", image: "https://media-cdn.tripadvisor.com/media/photo-l/12/05/db/5e/what-a-view.jpg", location_id: "13497261"},
+  {name: "Mitchell's Ice Cream", cuisines: "American, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican", address: "688 San Jose Ave, San Francisco, CA 94110-4925", image: "https://media-cdn.tripadvisor.com/media/photo-l/11/06/06/18/everyone-s-happy-when.jpg", location_id: "833458"},
+  {name: "Molinari Delicatessen", cuisines: "American, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmericanItalian, Deli, Vegetarian Friendly, Vegan Options", address: "373 Columbus Ave North Beach, San Francisco, CA 94133-3907", image: "https://media-cdn.tripadvisor.com/media/photo-l/0d/42/21/2d/molinari-deli.jpg", location_id: "879230"},
+  {name: "Geoff of Ichido", cuisines: "American, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmericanItalian, Deli, Vegetarian Friendly, Vegan OptionsJapanese, Seafood, Asian", address: "Exact address will be emailed after you book on EatWith.", image: "https://media-cdn.tripadvisor.com/media/photo-l/19/a3/a6/b5/multi-course-gourmet.jpg", location_id: "10763606"},
+  {name: "L'ardoise Bistro", cuisines: "American, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmericanItalian, Deli, Vegetarian Friendly, Vegan OptionsJapanese, Seafood, AsianFrench, European, Vegetarian Friendly, Gluten Free Options", address: "151 Noe St, San Francisco, CA 94114-1245", image: "https://media-cdn.tripadvisor.com/media/photo-l/06/1d/d6/04/l-ardoise-bistro.jpg", location_id: "1027321"},
+  {name: "Mo's Grill", cuisines: "American, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmericanItalian, Deli, Vegetarian Friendly, Vegan OptionsJapanese, Seafood, AsianFrench, European, Vegetarian Friendly, Gluten Free OptionsAmerican, Diner, Vegetarian Friendly", address: "1322 Grant Ave, San Francisco, CA 94133-3904", image: "https://media-cdn.tripadvisor.com/media/photo-f/0a/5a/19/b2/kreeeew.jpg", location_id: "353907"},
+  {name: "Kokkari Estiatorio", cuisines: "AmericanAmerican, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsMediterranean, Greek, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "200 Jackson St, San Francisco, CA 94111-1806", image: "https://media-cdn.tripadvisor.com/media/photo-l/03/32/a5/f0/arnisio-souvlaki-brochete.jpg", location_id: "353917"},
+  {name: "Lapisara Eatery", cuisines: "AmericanAmerican, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsMediterranean, Greek, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAsian, Thai, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "698 Post St Post St. & Jones St., San Francisco, CA 94109-8232", image: "https://media-cdn.tripadvisor.com/media/photo-l/12/ca/58/95/photo0jpg.jpg", location_id: "14018177"},
+  {name: "Chez Maman", cuisines: "AmericanAmerican, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsMediterranean, Greek, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAsian, Thai, Vegetarian Friendly, Vegan Options, Gluten Free OptionsFrench, European, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "1401 18th St, San Francisco, CA 94107-2801", image: "https://media-cdn.tripadvisor.com/media/photo-l/12/e6/ad/65/20180422-181326-largejpg.jpg", location_id: "360113"},
+  {name: "Pacific Catch", cuisines: "AmericanAmerican, Bar, Vegetarian Friendly, Vegan Options, Gluten Free OptionsMediterranean, Greek, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAsian, Thai, Vegetarian Friendly, Vegan Options, Gluten Free OptionsFrench, European, Vegetarian Friendly, Vegan Options, Gluten Free OptionsHawaiian, Seafood, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "2027 Chestnut St Cross Street Fillmore, San Francisco, CA 94123-2701", image: "https://media-cdn.tripadvisor.com/media/photo-l/16/66/43/48/enjoy-our-delicious-fish.jpg", location_id: "370405"},
+  {name: "Acme Bread", cuisines: "AmericanVegetarian Friendly, Vegan Options", address: "1 Ferry Plz, San Francisco, CA 94111-4212", image: "https://media-cdn.tripadvisor.com/media/photo-l/0d/28/a5/af/photo0jpg.jpg", location_id: "354018"},
+  {name: "Pacific Cafe", cuisines: "AmericanVegetarian Friendly, Vegan OptionsMediterranean, Greek, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Seafood, Gluten Free Options", address: "7000 Geary Blvd, San Francisco, CA 94121-1623", image: "https://media-cdn.tripadvisor.com/media/photo-l/0d/73/fb/fe/pacific-cafe-crab-cakes.jpg", location_id: "367037"},
+  {name: "Chapeau!", cuisines: "AmericanVegetarian Friendly, Vegan OptionsMediterranean, Greek, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Seafood, Gluten Free OptionsFrench, European, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "126 Clement St, San Francisco, CA 94118-2420", image: "https://media-cdn.tripadvisor.com/media/photo-l/02/86/4d/ec/chapeau.jpg", location_id: "367029"},
+  {name: "Dandelion Chocolate", cuisines: "AmericanVegetarian Friendly, Vegan OptionsMediterranean, Greek, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Seafood, Gluten Free OptionsFrench, European, Vegetarian Friendly, Vegan Options, Gluten Free OptionsCafe", address: "740 Valencia St, San Francisco, CA 94110-1735", image: "https://media-cdn.tripadvisor.com/media/photo-l/0f/c3/7c/88/photo1jpg.jpg", location_id: "3908809"},
+  {name: "Sweet Maple", cuisines: "AmericanJapanese, Seafood, AsianAmerican, Cafe, Gluten Free Options", address: "2101 Sutter St, San Francisco, CA 94115-3119", image: "https://media-cdn.tripadvisor.com/media/photo-l/0b/6f/cf/4b/img-20160528-113930-largejpg.jpg", location_id: "2225127"},
+  {name: "Betty Lou's Seafood and Grill", cuisines: "AmericanJapanese, Seafood, AsianAmerican, Cafe, Gluten Free OptionsAsian, Thai, Vegetarian Friendly, Vegan Options, Gluten Free OptionsSeafood, Vegetarian Friendly, Gluten Free Options", address: "318 Columbus Ave Corner of Columbus & Grant, San Francisco, CA 94133-3908", image: "https://media-cdn.tripadvisor.com/media/photo-l/0f/22/f3/0c/photo0jpg.jpg", location_id: "11862449"},
+  {name: "Norman's Ice Cream and Freezes", cuisines: "", address: "2801 Leavenworth St Ste 40, San Francisco, CA 94133-1129", image: "https://media-cdn.tripadvisor.com/media/photo-l/04/82/1c/fc/norman-s-ice-cream-and.jpg", location_id: "1833738"},
+  {name: "Hollywood Cafe", cuisines: "Japanese, Seafood, AsianFrench, European, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Cafe, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "530 North Point St, San Francisco, CA 94133-1312", image: "https://media-cdn.tripadvisor.com/media/photo-l/0d/74/3d/28/brioche-salata-e-frutta.jpg", location_id: "1537869"},
+  {name: "Surisan", cuisines: "Japanese, Seafood, AsianFrench, European, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAmerican, Cafe, Vegetarian Friendly, Vegan Options, Gluten Free OptionsAsian, Korean, Gluten Free Options", address: "505 Beach St A, San Francisco, CA 94133-1130", image: "https://media-cdn.tripadvisor.com/media/photo-l/10/bb/e3/cf/caramel-sauce.jpg", location_id: "11956915"},
+  {name: "The Baked Bear", cuisines: "AmericanVegetarian Friendly, Vegan OptionsAmerican, Vegetarian Friendly", address: "2824 Jones St off of Jefferson Street and Beach Street, San Francisco, CA 94133", image: "https://media-cdn.tripadvisor.com/media/photo-l/15/64/4e/e7/all-the-goodness.jpg", location_id: "10136254"},
+  {name: "Seven Hills", cuisines: "AmericanVegetarian Friendly, Vegan OptionsAmerican, Vegetarian FriendlyFrench, European, Vegetarian Friendly, Vegan Options, Gluten Free OptionsCafeSeafood, Italian, Vegetarian Friendly, Vegan Options, Gluten Free Options", address: "1896 Hyde St, San Francisco, CA 94109-2109", image: "https://media-cdn.tripadvisor.com/media/photo-l/0b/04/62/df/kobe-beef-carpaccio.jpg", location_id: "1999071"}
+])
+VoteRestaurant.create!([
+  {group_id: 3, restaurant_id: 36, active: false, vote: false, user_id: 16},
+  {group_id: 3, restaurant_id: 45, active: false, vote: false, user_id: 16},
+  {group_id: 3, restaurant_id: 36, active: false, vote: false, user_id: 17},
+  {group_id: 1, restaurant_id: 5, active: false, vote: false, user_id: 1},
+  {group_id: 1, restaurant_id: 1, active: false, vote: false, user_id: 1},
+  {group_id: 1, restaurant_id: 3, active: false, vote: false, user_id: 2},
+  {group_id: 1, restaurant_id: 1, active: false, vote: false, user_id: 2},
+  {group_id: 1, restaurant_id: 5, active: false, vote: false, user_id: 3},
+  {group_id: 1, restaurant_id: 1, active: false, vote: false, user_id: 3},
+  {group_id: 1, restaurant_id: 3, active: false, vote: true, user_id: 3},
+  {group_id: 1, restaurant_id: 3, active: false, vote: true, user_id: 1},
+  {group_id: 1, restaurant_id: 5, active: false, vote: true, user_id: 2},
+  {group_id: 3, restaurant_id: 45, active: false, vote: false, user_id: 17},
+  {group_id: 3, restaurant_id: 34, active: false, vote: true, user_id: 17},
+  {group_id: 3, restaurant_id: 34, active: false, vote: true, user_id: 16},
+  {group_id: 3, restaurant_id: 34, active: false, vote: true, user_id: 15},
+  {group_id: 3, restaurant_id: 45, active: false, vote: true, user_id: 14},
+  {group_id: 3, restaurant_id: 34, active: false, vote: true, user_id: 13},
+  {group_id: 3, restaurant_id: 34, active: false, vote: true, user_id: 12},
+  {group_id: 2, restaurant_id: 13, active: false, vote: false, user_id: 4},
+  {group_id: 2, restaurant_id: 4, active: false, vote: false, user_id: 4},
+  {group_id: 2, restaurant_id: 13, active: false, vote: false, user_id: 5},
+  {group_id: 2, restaurant_id: 4, active: false, vote: false, user_id: 5},
+  {group_id: 2, restaurant_id: 8, active: false, vote: false, user_id: 6},
+  {group_id: 2, restaurant_id: 4, active: false, vote: false, user_id: 6},
+  {group_id: 2, restaurant_id: 13, active: false, vote: false, user_id: 7},
+  {group_id: 2, restaurant_id: 4, active: false, vote: false, user_id: 7},
+  {group_id: 2, restaurant_id: 8, active: false, vote: false, user_id: 8},
+  {group_id: 2, restaurant_id: 13, active: false, vote: false, user_id: 8},
+  {group_id: 2, restaurant_id: 8, active: false, vote: false, user_id: 9},
+  {group_id: 2, restaurant_id: 4, active: false, vote: false, user_id: 9},
+  {group_id: 2, restaurant_id: 13, active: false, vote: false, user_id: 10},
+  {group_id: 2, restaurant_id: 4, active: false, vote: false, user_id: 10},
+  {group_id: 2, restaurant_id: 13, active: false, vote: false, user_id: 11},
+  {group_id: 2, restaurant_id: 4, active: false, vote: false, user_id: 11},
+  {group_id: 2, restaurant_id: 8, active: false, vote: true, user_id: 11},
+  {group_id: 2, restaurant_id: 8, active: false, vote: true, user_id: 10},
+  {group_id: 2, restaurant_id: 13, active: false, vote: true, user_id: 9},
+  {group_id: 2, restaurant_id: 4, active: false, vote: true, user_id: 8},
+  {group_id: 2, restaurant_id: 8, active: false, vote: true, user_id: 7},
+  {group_id: 2, restaurant_id: 13, active: false, vote: true, user_id: 6},
+  {group_id: 2, restaurant_id: 8, active: false, vote: true, user_id: 5},
+  {group_id: 2, restaurant_id: 8, active: false, vote: true, user_id: 4},
+  {group_id: 3, restaurant_id: 36, active: false, vote: false, user_id: 12},
+  {group_id: 3, restaurant_id: 45, active: false, vote: false, user_id: 12},
+  {group_id: 3, restaurant_id: 36, active: false, vote: false, user_id: 13},
+  {group_id: 3, restaurant_id: 45, active: false, vote: false, user_id: 13},
+  {group_id: 3, restaurant_id: 34, active: false, vote: false, user_id: 14},
+  {group_id: 3, restaurant_id: 36, active: false, vote: false, user_id: 14},
+  {group_id: 3, restaurant_id: 36, active: false, vote: false, user_id: 15},
+  {group_id: 3, restaurant_id: 45, active: false, vote: false, user_id: 15}
+])
+User.create!([
+  {name: "Jimmy", email: "jimmy@email.com", password_digest: "$2a$12$ypJti4b20uiOX9jOnVq5uujR/DAmpDg/lrnFDWZyLz/.VLDwBme1y", group_id: 1},
+  {name: "Drew", email: "drew@email.com", password_digest: "$2a$12$yhd8roV2LU.7c6OIz.RvTuxIeUbfQZqcEjpwpPst8IX0ceEw2vuTe", group_id: 1},
+  {name: "Zac", email: "zac@email.com", password_digest: "$2a$12$a7CGS6FMLNk4YF/rwbsNPOVCBm4HCWDcGbEFO3dYHbWluHLyHP2jy", group_id: 1},
+  {name: "Travis", email: "travis@email.com", password_digest: "$2a$12$TIcdEfQPYhrhag44UEXGZ.7E6bHe/OY6KeUM./jwg2m8dkiN8yMuG", group_id: 2},
+  {name: "Erica", email: "erica@email.com", password_digest: "$2a$12$DlDVtgqxVn/IV38V.i0ACe74zWVkc5rNWpiyJ5H2oiErk5Z0Z0NDO", group_id: 2},
+  {name: "Steve", email: "steve@email.com", password_digest: "$2a$12$Nean7Y7kMGuCujaF/rigQOPet.MxCuLxaz8CTVG60SdT9dPp12wk.", group_id: 2},
+  {name: "Rachel", email: "rachel@email.com", password_digest: "$2a$12$J.EVcAoh3WJn8IlKIparvO49qCpbKkJaZTwxC0dyQRFEXFdJPVpUa", group_id: 2},
+  {name: "Sam", email: "sam@email.com", password_digest: "$2a$12$3.Gq0HD8Oo5n1.DEVDUG6eUG6NQC/noxyAPRdSrwkPeikqbJ/0f5a", group_id: 2},
+  {name: "Todd", email: "todd@email.com", password_digest: "$2a$12$LDUwzMbtxJjbGeXw0fcvJOwImDy4wEMbLK3./OupfuVIfQlO7.Qqi", group_id: 2},
+  {name: "Mary", email: "mary@email.com", password_digest: "$2a$12$vuVIGLCYJ28NdAHHa9Ctc.N2euUGJWgCOaVgVKbh5kHOibRBgHcpy", group_id: 2},
+  {name: "Shannon", email: "shannon@email.com", password_digest: "$2a$12$doaNLNYzdnyB66pacSGoF.Fa3n5rQFa.92G7OEIo5DnPTRNQ0dn6G", group_id: 2},
+  {name: "Logan", email: "logan@lyft.com", password_digest: "$2a$12$vxFJxOdzIqnCMHh2y.A1Je0cIZZPsL4uVpsFo1DthN0ZRA0BDPB5G", group_id: 3},
+  {name: "John", email: "john@lyft.com", password_digest: "$2a$12$ZuUo2xY5TnkDumKmv0exn.8U39Qc1tyVMWsREZC/AkDVt7gWU.r9i", group_id: 3},
+  {name: "Elaine", email: "elaine@lyft.com", password_digest: "$2a$12$zf24SFK0JghxUW90LpAu2uJp0MWOa8ERrcpXRnayYNp4Qql6J4GM2", group_id: 3},
+  {name: "Ashwin", email: "ashwin@lyft.com", password_digest: "$2a$12$g/aj2DHvKXVfx6CxmvxaCOvu/yPW0wt/wwMkA2wlDvcZiYEvzcmHi", group_id: 3},
+  {name: "Kristin", email: "kristin@lyft.com", password_digest: "$2a$12$EvVlKEyu1GD7DG/WZCci.OSahdCbbIArtUzF.Wfc0OCw0k7tldp.K", group_id: 3},
+  {name: "Ben", email: "ben@lyft.com", password_digest: "$2a$12$EhiJHjVf8GaMBObEmIaBKu.O1BHLWV0pJUN211MIaxk75vVnxJZnK", group_id: 3}
+])
