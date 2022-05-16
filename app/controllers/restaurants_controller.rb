@@ -28,7 +28,7 @@ class RestaurantsController < ApplicationController
         render json: {message: 'Restaurant has already been added to favorites'}
       end
     else
-      render json: {message: "You must be logged in to create a new restaurant"}
+      render json: {message: "You must be logged in to add restaurants to your favorites"}
     end
   end
   
@@ -98,10 +98,14 @@ class RestaurantsController < ApplicationController
     p all_user_favorites
     restaurant = Restaurant.find_by(location_id: location_id)
     p restaurant
-    all_user_favorites.each do |favorite|
-      if favorite.restaurant_id == restaurant.id
-        duplicate = true
-        break
+    if restaurant == nil
+      duplicate = false
+    else
+      all_user_favorites.each do |favorite|
+        if favorite.restaurant_id == restaurant.id
+          duplicate = true
+          break
+        end
       end
     end
     return duplicate
