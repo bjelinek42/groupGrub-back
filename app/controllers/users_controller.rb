@@ -22,7 +22,7 @@ class UsersController < ApplicationController
       group = user.group
       render json: {"user" => user, "restaurants" => restaurants, "group" => group}
     else
-      render json: {message: "You must be logged in view your profile"}
+      render json: {message: "You must be logged in view your profile"}, status: :unauthorized
     end
   end
 
