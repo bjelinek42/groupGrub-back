@@ -49,7 +49,7 @@ get "/restaurants/search" => "restaurants#search" uses the third party api to se
 
 ### Known Problems
 
-Currently when adding restaurants it is saving some but not others. The error is occuring in the create action when comparing the selected restaurant to the favorites table.
+No obvious problems currently
 
 ### Roadmap
 
