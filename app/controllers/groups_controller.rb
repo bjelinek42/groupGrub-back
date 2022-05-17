@@ -12,6 +12,7 @@ class GroupsController < ApplicationController
     else
       @winning_restaurant = "None"
     end
+    p @winning_restaurant
     render template: "groups/show"
   end
 

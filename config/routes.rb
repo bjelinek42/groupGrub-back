@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+  get "/users/group" => "groups#show"
+  get "/groups" => "groups#index"
+
   get "/users/:id" => "users#show"
   post "/users" => "users#create"
 
@@ -13,9 +16,6 @@ Rails.application.routes.draw do
   post "/restaurants" => "restaurants#create"
   get "/restaurants/search" => "restaurants#search"
   post "/restaurants/search" => "restaurants#find_city"
-
-  get "/groups/:id" => "groups#show"
-  get "/groups" => "groups#index"
 
   get "/vote_restaurants" => "vote_restaurants#index"
   post "/vote_restaurants" => "vote_restaurants#create"
