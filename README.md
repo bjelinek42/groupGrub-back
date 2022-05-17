@@ -6,7 +6,7 @@ groupGrub is an app that aims to reduce the frustration when groups are trying t
 
 Usernames and passwords can be found in seeds file
 
-View on heroku (still a work in progress): https://desolate-shore-45884.herokuapp.com/
+View on Netlify (still a work in progress): https://majestic-stardust-def3bf.netlify.app/
 
 ## Installation
 
