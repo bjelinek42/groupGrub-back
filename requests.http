@@ -39,7 +39,7 @@ Authorization: Bearer {{jwt}}
 content-type: application/json
 
 {
-  "currentCity": "Cedar Rapids, Iowa"
+  "currentCity": "Colorado Springs"
 }
 
 ###

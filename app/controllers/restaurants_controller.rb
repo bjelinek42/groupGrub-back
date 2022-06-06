@@ -47,7 +47,7 @@ class RestaurantsController < ApplicationController
     request["content-type"] = 'application/x-www-form-urlencoded'
     request["X-RapidAPI-Host"] = 'worldwide-restaurants.p.rapidapi.com'
     request["X-RapidAPI-Key"] = ENV["RESTAURANT_API"]
-    request.body = "language=en_US&limit=1000&location_id=#{location_id}&currency=USD"
+    request.body = "language=en_US&limit=50&location_id=#{location_id}&currency=USD"
 
     response = http.request(request)
 
