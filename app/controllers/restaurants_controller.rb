@@ -36,7 +36,8 @@ class RestaurantsController < ApplicationController
     require 'uri'
     require 'net/http'
     require 'openssl'
-    location_id = params[:chosenCity]
+    # location_id = params[:chosenCity]
+    location_id = 33364
     url = URI("https://worldwide-restaurants.p.rapidapi.com/search")
 
     http = Net::HTTP.new(url.host, url.port)
@@ -50,8 +51,21 @@ class RestaurantsController < ApplicationController
     request.body = "language=en_US&limit=50&location_id=#{location_id}&currency=USD"
 
     response = http.request(request)
+    restaurant_list = JSON.parse(response.read_body)["results"]["data"]
+    restaurant_list.each do |schedule|
+      if schedule["hours"]
+        hours = convert_schedule(schedule["hours"]["week_ranges"])
+        schedule["hours"]["week_ranges"] = hours
+      end
+    end
+    # schedule = JSON.parse(response.read_body)["results"]["data"][0]["hours"]["week_ranges"]
 
-    render json: JSON.parse(response.read_body)["results"]["data"]
+    # converted_schedule = convert_schedule(schedule)
+
+    # p restaurant_list[0]["hours"]["week_ranges"] = converted_schedule
+
+    render json: restaurant_list
+    
   end
 
   def find_city
@@ -134,5 +148,64 @@ class RestaurantsController < ApplicationController
       cities << location
     end
     return cities
+  end
+
+  def convert_schedule(schedule)
+    weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    weekly_hours = ""
+    i = 0
+    schedule.each do |hours|
+      daily_hours = "#{weekdays[i]}: "
+      if hours.length == 0
+        open = "Closed; "
+        daily_hours += open
+      else
+        hours.each_with_index do |time, index|
+          open_time = time["open_time"]
+          open_hours = convert_hours(open_time)
+          open_minutes = convert_minutes(open_time)
+          close_time = time["close_time"]
+          close_hours = convert_hours(close_time)
+          close_minutes = convert_minutes(close_time)
+          open = "#{open_hours[:hours]}:#{open_minutes} #{open_hours[:meridiam]} - #{close_hours[:hours]}:#{close_minutes} #{close_hours[:meridiam]}"
+          daily_hours += open
+          if hours.length ==2
+            unless index == 1
+              daily_hours += ", "
+            end
+          end
+        end
+      end
+      unless i == 7
+        daily_hours += "; "
+      end
+      i += 1
+      weekly_hours += daily_hours
+    end
+    return weekly_hours
+  end
+
+  def convert_hours(time)
+    hours = time / 60
+    if hours / 12.0 > 1 && hours / 12.0 !=2
+      hours = hours - 12
+      meridiam = "pm"
+    elsif hours == 12
+      meridiam = "pm"
+    else
+      if hours == 12 || hours == 0
+        hours = 12
+      end
+      meridiam = "am"
+    end
+    return { hours: hours, meridiam: meridiam}
+  end
+  
+  def convert_minutes(time)
+    minutes = time % 60
+    if minutes == 0
+      minutes = "00"
+    end
+    return minutes
   end
 end
