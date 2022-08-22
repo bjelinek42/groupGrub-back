@@ -17,6 +17,7 @@ class RestaurantsController < ApplicationController
         address: params[:address],
         image: params[:image],
         location_id: params[:location_id],
+        schedule: params[:schedule]
       )
       if duplicate_restaurant == false
         save_restaurant_and_favorite(restaurant)
