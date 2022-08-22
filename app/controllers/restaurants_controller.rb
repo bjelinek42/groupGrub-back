@@ -54,6 +54,7 @@ class RestaurantsController < ApplicationController
     restaurant_list = JSON.parse(response.read_body)["results"]["data"]
     restaurant_list.each do |schedule|
       if schedule["hours"]
+        p schedule["hours"]["week_ranges"]
         hours = convert_schedule(schedule["hours"]["week_ranges"])
         schedule["hours"]["week_ranges"] = hours
       end
@@ -151,44 +152,32 @@ class RestaurantsController < ApplicationController
   end
 
   def convert_schedule(schedule)
-    weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    weekly_hours = ""
     i = 0
-    schedule.each do |hours|
-      daily_hours = "#{weekdays[i]}: "
-      if hours.length == 0
-        open = "Closed; "
-        daily_hours += open
+    converted_schedule = {}
+    schedule.each do |day|
+      if day.length == 0
+        schedule[i] << "Closed"
       else
-        hours.each_with_index do |time, index|
-          open_time = time["open_time"]
-          open_hours = convert_hours(open_time)
-          open_minutes = convert_minutes(open_time)
-          close_time = time["close_time"]
-          close_hours = convert_hours(close_time)
-          close_minutes = convert_minutes(close_time)
-          open = "#{open_hours[:hours]}:#{open_minutes} #{open_hours[:meridiam]} - #{close_hours[:hours]}:#{close_minutes} #{close_hours[:meridiam]}"
-          daily_hours += open
-          if hours.length ==2
-            unless index == 1
-              daily_hours += ", "
-            end
-          end
+        day.each do |open|
+          p open
+          open_hours = convert_hours(open["open_time"])
+          open_minutes = convert_minutes(open["open_time"])
+          close_hours = convert_hours(open["close_time"])
+          close_minutes = convert_minutes(open["close_time"])
+          open["open_time"] = "#{open_hours["hours"]}:#{open_minutes} #{open_hours["meridiam"]}"
+          open["close_time"] = "#{close_hours["hours"]}:#{close_minutes} #{close_hours["meridiam"]}"
         end
       end
-      unless i == 7
-        daily_hours += "; "
-      end
       i += 1
-      weekly_hours += daily_hours
     end
-    return weekly_hours
+    return schedule
   end
-
+  
   def convert_hours(time)
+    p time
     hours = time / 60
     if hours / 12.0 > 1 && hours / 12.0 !=2
-      hours = hours - 12
+      hours = (hours - 12)
       meridiam = "pm"
     elsif hours == 12
       meridiam = "pm"
@@ -198,7 +187,8 @@ class RestaurantsController < ApplicationController
       end
       meridiam = "am"
     end
-    return { hours: hours, meridiam: meridiam}
+    hours = hours.to_s
+    return { "hours" => hours, "meridiam" => meridiam}
   end
   
   def convert_minutes(time)
@@ -206,6 +196,6 @@ class RestaurantsController < ApplicationController
     if minutes == 0
       minutes = "00"
     end
-    return minutes
+    return minutes.to_s
   end
 end
