@@ -17,7 +17,12 @@ class RestaurantsController < ApplicationController
         address: params[:address],
         image: params[:image],
         location_id: params[:location_id],
-        schedule: params[:schedule]
+        schedule: params[:schedule],
+        reservations: params[:reservations],
+        price: params[:price],
+        rating: params[:rating],
+        reviews: params[:reviews],
+        phone_number: params[:phone_number]
       )
       if duplicate_restaurant == false
         save_restaurant_and_favorite(restaurant)
