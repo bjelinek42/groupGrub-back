@@ -17,10 +17,11 @@ class UsersController < ApplicationController
 
   def show
     if current_user
-      user = current_user
-      restaurants = user.restaurants
-      group = user.group
-      render json: {"user" => user, "restaurants" => restaurants, "group" => group}
+      @user = current_user
+      restaurants = @user.restaurants
+      group = @user.group
+      # render template: "users/show"
+      render json: {"user" => @user, "restaurants" => restaurants, "group" => group}
     else
       render json: {message: "You must be logged in view your profile"}, status: :unauthorized
     end

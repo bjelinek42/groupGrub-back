@@ -1,0 +1,5 @@
+{
+  id: @restaurant.id,
+  created_at: @restaurant.created_at,
+  updated_at: @restaurant.updated_at
+}

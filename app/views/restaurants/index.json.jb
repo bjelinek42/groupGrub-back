@@ -1,0 +1,6 @@
+@restaurants.map do |restaurant|
+  {
+    id: restaurant.id,
+    url: restaurant_url(restaurant, format: :json)
+  }
+end
