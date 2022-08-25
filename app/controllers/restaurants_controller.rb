@@ -60,16 +60,10 @@ class RestaurantsController < ApplicationController
     restaurant_list = JSON.parse(response.read_body)["results"]["data"]
     restaurant_list.each do |schedule|
       if schedule["hours"]
-        p schedule["hours"]["week_ranges"]
         hours = convert_schedule(schedule["hours"]["week_ranges"])
         schedule["hours"]["week_ranges"] = hours
       end
     end
-    # schedule = JSON.parse(response.read_body)["results"]["data"][0]["hours"]["week_ranges"]
-
-    # converted_schedule = convert_schedule(schedule)
-
-    # p restaurant_list[0]["hours"]["week_ranges"] = converted_schedule
 
     render json: restaurant_list
     
@@ -116,9 +110,7 @@ class RestaurantsController < ApplicationController
   def duplicate_favorite?(location_id)
     duplicate = false
     all_user_favorites = RestaurantUser.where(user_id: current_user.id)
-    p all_user_favorites
     restaurant = Restaurant.find_by(location_id: location_id)
-    p restaurant
     if restaurant == nil
       duplicate = false
     else
@@ -165,7 +157,6 @@ class RestaurantsController < ApplicationController
         schedule[i] << "Closed"
       else
         day.each do |open|
-          p open
           open_hours = convert_hours(open["open_time"])
           open_minutes = convert_minutes(open["open_time"])
           close_hours = convert_hours(open["close_time"])
@@ -180,7 +171,6 @@ class RestaurantsController < ApplicationController
   end
   
   def convert_hours(time)
-    p time
     hours = time / 60
     if hours / 12.0 > 1 && hours / 12.0 !=2
       hours = (hours - 12)
