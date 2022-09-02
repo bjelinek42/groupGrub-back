@@ -49,11 +49,18 @@ class VoteRestaurantsController < ApplicationController
   def create_tally
     group = current_user.group
     votes = []
+    gr = Restaurant.joins(:groups_restaurants).where("group_id = ?", current_user.group_id).order('created_at DESC').last(3)
+    puts "****************"
+    puts gr
+    puts "****************"
     current_user.group.users.each do |user|
       user.restaurants.each do |restaurant|
-        votes << restaurant
+        unless gr.include?(restaurant)
+          votes << restaurant
+        end
       end
     end
+
     return votes
   end
 
@@ -157,8 +164,7 @@ class VoteRestaurantsController < ApplicationController
   end
 
   def save_winning_restaurant_to_group(winning_restaurant)
-    g = Group.find(current_user.group.id)
-    g.restaurant_id = winning_restaurant.id
+    g = GroupsRestaurant.new(restaurant_id: winning_restaurant.id, group_id: current_user.group_id)
     g.save
   end
 
