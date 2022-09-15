@@ -42,8 +42,8 @@ class RestaurantsController < ApplicationController
     require 'uri'
     require 'net/http'
     require 'openssl'
-    # location_id = params[:chosenCity]
-    location_id = 33364
+    location_id = params[:chosenCity]
+    # location_id = 33364
     url = URI("https://worldwide-restaurants.p.rapidapi.com/search")
 
     http = Net::HTTP.new(url.host, url.port)
