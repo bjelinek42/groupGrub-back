@@ -1,12 +1,5 @@
 class RestaurantsController < ApplicationController
 
-  def index
-    user = current_user
-    user_restaurants = user.restaurants
-    restaurants = Restaurant.all
-    render json: {"restaurants" => restaurants, "user_restaurants" => user_restaurants}
-  end
-  
   def create
     if current_user
       duplicate_restaurant = duplicate_restaurant?(params[:location_id])

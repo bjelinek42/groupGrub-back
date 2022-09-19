@@ -12,7 +12,6 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
-  get "/restaurants" => "restaurants#index"
   post "/restaurants" => "restaurants#create"
   get "/restaurants/search" => "restaurants#search"
   post "/restaurants/search" => "restaurants#find_city"
