@@ -4,4 +4,5 @@ class Restaurant < ApplicationRecord
   belongs_to :vote_restaurant, optional: true
   has_many :groups_restaurants
   has_many :groups, through: :groups_restaurants
+
 end
